@@ -13,7 +13,7 @@
 
   ## Table of Contents
   1. [Project Description](#Description)
-  2. [Installation]](#Installation)
+  2. [Installation](#Installation)
   3. [Challenges Encounted](#Challenges)
   4. [Future Development](#Future-Development)
   5. [Tests](#Tests)
