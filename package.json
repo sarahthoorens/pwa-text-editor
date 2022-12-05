@@ -1,7 +1,10 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "",
+  "engines" : {
+    "node" : "16.x"
+  },
+  "description": "text editor for offline and web use",
   "private": true,
   "main": "server.js",
   "scripts": {
@@ -10,8 +13,7 @@
     "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
-    "client": "cd client && npm start",
-    "heroku-prebuild": "npm install --dev"
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
