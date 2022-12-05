@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 
 module.exports = () => {
@@ -11,8 +12,7 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      editor: './src/js/editor.js',
-      header: './src/js/header.js'
+    
     },
     //Output point for files
     output: {
@@ -25,6 +25,7 @@ module.exports = () => {
         title: 'JATE WEBPACK',
         template: './index.html',
       }),
+      new GenerateSW(),
       // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -35,7 +36,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'JATE',
+        name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'A simple text editor',
         background_color: '#225ca3',
@@ -62,12 +63,7 @@ module.exports = () => {
           use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
-        },
-        {
           test: /\.m?js$/,
-          exclude: [/node_modules/, require.resolve('./index.html')],
           exclude: /node_modules/,
           // We use babel-loader in order to use ES6.
           use: {
