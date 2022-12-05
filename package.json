@@ -11,7 +11,7 @@
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
     "server": "cd server nodemon server.js --ignore client",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm run build && webpack --config webpack.config.js",
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start",
     "heroku-prebuild": "npm install --dev"
@@ -22,14 +22,13 @@
   "dependencies": {
     "concurrently": "^5.2.0",
     "express": "^4.17.2",
+    "html-webpack-plugin": "^5.5.0",
     "if-env": "^1.0.4",
     "nodemon": "^2.0.4",
-    "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0",
-    "html-webpack-plugin": "^5.5.0",
     "webpack-pwa-manifest": "^4.3.0"
   },
   "devDependencies": {
-
+    "webpack": "^5.75.0"
   }
 }
