@@ -14,7 +14,8 @@
     "build": "cd client && npm run build && webpack --mode production --config ./webpack.prod.js",
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start",
-    "heroku-prebuild": "npm install --dev"
+    "heroku-prebuild": "npm install --dev",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +27,6 @@
   "devDependencies": {
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.0"
+    "webpack": "^5.75.0"
   }
 }
