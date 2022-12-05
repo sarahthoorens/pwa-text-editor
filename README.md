@@ -57,9 +57,19 @@ THEN I should have proper build scripts for a webpack application
 run ```npm i``` to install dependencies
 To deploy the application locally run ```npm start``` in the terminal. This will open the application in the browser at localhost:3000.
 
+If using deployed version, user will need to install the offline editor by toggling the download icon in the top right corner of the browser URL bar. Unfortunately, the deployed version does not process the event from the install button as the local version does.
+
+![url](./Assets/url.png)
+
 ## Deployed Screenshots
-![landing-page](./public/assets/portfolio-landing.png)
-_<p align="center">Landing Page</p>_
+![manifest](./Assets/manifest.png)
+_<p align="center">Manifest</p>_
+
+![service worker](./Assets/sw.png)
+_<p align="center">Service Worker</p>_
+
+![indexed](./Assets/indexeddb.png)
+_<p align="center">Indexed DB</p>_
 </br>
 
 ## Challenges
