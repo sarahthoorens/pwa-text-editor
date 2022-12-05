@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
- **Visit the [Deployed Site here.]()**
+ **Visit the [Deployed Site here.](https://hidden-gorge-68221.herokuapp.com/)**
 
   **Deployment Date:**  12/04/22 <br>
  
@@ -65,6 +65,7 @@ _<p align="center">Landing Page</p>_
 ## Challenges
 With the heavy lifting already completed for this project, the biggest challenge was ensuring proper configuration of the service worker and manifest files. My first deployment returned several errors, and I had to fix some syntax in the webpack.config.js file. There was an issue with the format of my store put object that was keeping IndexedDB data from being stored under proper keys. 
 
+Deploying to Heroku was extremely fiddly, requiring so much troubleshooting. In the end, the app does not function as optimally hosted as it does locally, but it does meet the criteria for a PWA. (The install button does not engage, but there is still possible to install with the browser's url icon. This is fully functional on the local version.)
 
 ## Future Development
 
