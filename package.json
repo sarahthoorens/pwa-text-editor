@@ -28,6 +28,7 @@
     "webpack-cli": "^5.0.0"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^5.5.0"
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-pwa-manifest": "^4.3.0"
   }
 }
